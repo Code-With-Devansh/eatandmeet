@@ -1,17 +1,460 @@
 sr,name,price
-,Veg Momo's (Steam),29
-,Veg Momo's (Fried),39
-,Paneer Momo's (Steam),39
-,Paneer Momo's (Fried),49
-,Cheese Corn Momo's (Steam),49
-,Cheese Corn Momo's (Fried),59
-,Egg Momo's (Steam),49
-,Egg Momo's (Fried),59
-,Chicken Momo's(Steam),79
-,Chicken Momo's(Fried),89
-,KurKure Momo's(Veg),69
-,KurKure Momo's(Non Veg),109
-,Devil Momo's(Veg),89
-,Devil Momo's(Non Veg),119
-,Gravy Momo's (Veg),89
-,Gravy Momo's (Non Veg),119
+1,Veg Momo's (Steam),29
+2,Veg Momo's (Fried),39
+3,Paneer Momo's (Steam),39
+4,Paneer Momo's (Fried),49
+5,Cheese Corn Momo's (Steam),49
+6,Cheese Corn Momo's (Fried),59
+7,Egg Momo's (Steam),49
+8,Egg Momo's (Fried),59
+9,Chicken Momo's(Steam),79
+10,Chicken Momo's(Fried),89
+11,KurKure Momo's(Veg),69
+12,KurKure Momo's(Non Veg),109
+13,Devil Momo's(Veg),89
+14,Devil Momo's(Non Veg),119
+15,Gravy Momo's (Veg),89
+16,Gravy Momo's (Non Veg),119
+17,Noodle(Veg),39
+18,Noodle(Non Veg),59
+19,Chatkara Noodle (Veg),49
+20,Chatkara Noodle (Non Veg),69
+21,Hakka Noodle (Veg),59
+22,Hakka Noodle (Non Veg),89
+23,Singapuri Noodle(Veg),59
+24,Singapuri Noodle(Non Veg),89
+25,Soya Veg Noodle ,59
+26,Chilli Garlic Noodle (Veg),69
+27,Chilli Garlic Noodle (Non Veg),99
+28,Schezwan Noodle(Veg),69
+29,Schezwan Noodle(Non Veg),99
+30,Paneer Noodle (Veg),69
+31,Fried Rice (Veg),49
+32,Fried Rice (Non Veg),79
+33,Schezwan Fried Rice (Veg),59
+34,Schezwan Fried Rice (Non Veg),89
+35,Soya Fried Rice,79
+36,Mix Fried Rice,79
+37,Paneer Fried Rice,79
+38,Mushroom Fried Rice,79
+39,Chilli Paneer ,129
+40,Chilli Mushroom,139
+41,Paneer 65,139
+42,Manchurian (Veg),79
+43,Manchurian (Non Veg),119
+44,Schezwan Manchurian(Veg),89
+45,Schezwan Manchurian(Non Veg),129
+46,Soya Manchurian,89
+47,Paneer Manchurian,109
+48,Cheese Balls (Veg),119
+49,Cheese Balls (Non Veg),139
+50,Chilli Potato,89
+51,Honey Chilli Potato,99
+52,Onion Uttapam,69
+53,Tomato Uttapam,69
+54,Onion Tomato Uttapam,79
+55,Mix Veg Uttapam,79
+56,Paneer Uttapam,89
+57,Cheese Uttapam,89
+58,Cream of Tomato,39
+59,Clear Soup(Veg),49
+60,Clear Soup(Non Veg),69
+61,Lung Fung Soup(Veg),49
+62,Lung Fung Soup(Non Veg),69
+63,Hot & Sour Soup(Veg),49
+64,Hot & Sour Soup(Non Veg),69
+65,Mushroom Cappuccino,79
+66,Chicken thukpa,79
+67,Lemon Coriander(Veg),49
+68,Lemon Coriander(Non Veg),79
+69,Chicken Lollipop ,149
+70,Chilli Chicken,169
+71,Chicken 65,169
+72,Fish Finger,199
+73,Idli,49
+74,Rava Idli,49
+75,Ghee Tawa Fried Idli,69
+76,Vada Sambar,59
+77,Daal Vada,59
+78,Mix Veg Vada,69
+79,Upma,79
+80,Paper Dosa,39
+81,Rava Paper Dosa,49
+82,Masala Dosa,59
+83,Rava Masala Dosa,59
+84,Schezwan Masala Dosa,79
+85,Cheese Masala Dosa,79
+86,Rava Cheese Masala Dosa,79
+87,Paneer Cheese Masala Dosa,89
+88,Paneer Cheese Schezwan Masala Dosa,89
+89,Paneer Cheese Ghotala Dosa,99
+90,Barbie Dosa,99
+91,Sambhar (Per Bowl),20
+92,Spiral Potato Kurkure,49
+93,Spiral Potato Lemon,49
+94, Spiral Potato Periperi,49
+95,Spiral Potato Punjabi Tadka,59
+96,Spiral Potato Indori Lajawab,59
+97,Classic Fries,59
+98,Peri Peri Fries,69
+99,Cheese Fries,79
+100,Chilli Garlic Potato Shots,89
+101,Potato Cheese Shots,89
+102,Regular Tea (Normal),15
+103,Regular Tea (Jumbo),25
+104,Ginger Tea (Normal),20
+105,Ginger Tea (Jumbo),30
+106,Elaichi Tea (Normal),20
+107,Elaichi Tea (Jumbo),30
+108,Masala Tea (Normal),20
+109,Masala Tea (Jumbo),30
+110,Tulsi Tea (Normal),20
+111,Tulsi Tea (Jumbo),30
+112,Jaggery Tea (Normal),25
+113,Jaggery Tea (Jumbo),40
+114,Chocolate Tea (Normal),25
+115,Chocolate Tea (Jumbo),40
+116,Rose Tea (Normal),25
+117,Rose Tea (Jumbo),40
+118,Paan Tea (normal),30
+119,Paan Tea (Jumbo),50
+120,Saffron Tea (Normal),30
+121,Saffron Tea (Jumbo),50
+122,Butterscotch Tea (Normal),30
+123,Butterscotch Tea (Jumbo),50
+124,Mint Tea (Normal),30
+125,Mint Tea (Jumbo) ,50
+126,Bubble Gum Tea (Normal),30
+127,Bubble Gum Tea (Jumbo),50
+128,Lime & Honey Smoothie,79
+129,Mango Smoothie,99
+130,Coffee Smoothie,99
+131,Mango & Passion Fruit Smoothie,99
+132,Banana Smoothie,99
+133,Orange Smoothie,99
+134,Water Melon Smoothie,99
+135,Cashew Smoothie,119
+136,Peach Smoothie,119
+137,Pomegranate Smoothie,119
+138,Pear Smoothie,119
+139,Strawberry Smoothie,119
+140,Aloo Masala Sandwich,49
+141,Bombay Kachha Grilled Sandwich,59
+142,Cheese Chutney Sandwich,59
+143,Coleslaw Sandwich,69
+144,Corn Cheese Sandwich,69
+145,Black Coffee,30
+146,Classic Coffee,30
+147,Hot Strong Coffee,40
+148,Hazelnut Coffee,49
+149,Hot Chocolate Coffee,49
+150,Brownie,49
+151,Melody,49
+152,Mosambi (Regular),49
+153,Mosambi (XL),79
+154,Pineapple (Regular),49
+155,Pineapple (XL),79
+156,Carrot(Regular),59
+157,Carrot (XL),89
+158,Mix Fruit(Regular),59
+159,Mix Fruit (XL),89
+160,Water Melon (regular),59
+161,Water Melon(XL),89
+162,Fruit Punch (Regular),69
+163,Fruit Punch (XL),99
+164,Anar & Beetroot (Regular),89
+165,Anar & Beetroot (XL),139
+166,Margherita Kullhad,69
+167,Veg Kullhad Pizza,79
+168,Paneer Kullhad Pizza,89
+169,Alfredo White Sauce Pasta,69
+170,Arrabiata Red Sauce Pasta,69
+171,Pink Sauce Pasta,69
+172,Smoky Pasta,89
+173,Tandoori Pasta,89
+174,Veg Cheese Grilled Sandwich,89
+175,Tandoori Paneer Sandwich,89
+176,Angithi Veg Club Sandwich,109
+177,Hot Paneer Club Sandwich,109
+178,Cheese Burst (Chai NOG Special) Sandwich,119
+179,Orange Slush,25
+180,Lemon Slush,25
+181,Mango Slush,25
+182,Litchi Slush,30
+183,Pineapple Slush,30
+184,Blueberry Slush,40
+185,Kiwi Slush,40
+186,Classic Cold Coffee,49
+187,Strong Cold Coffee,59
+188,Thick Cold Coffee,69
+189,Creamy Cold Coffee,89
+190,Hazelnut Cold Coffee,89
+191,Caramel Cold Coffee,89
+192,Brownie Cold Coffee,89
+193,Cold Drink (Coke/Dew/Limca/Fanta/Sprite),20
+194,Mineral Water,15
+195,Lemon Iced Tea,49
+196,Mint Iced Tea,49
+197,Water Melon Iced Tea,69
+198,Blue berry Iced Tea,69
+199,Strawberry Iced Tea,69
+200,Bun Maska ,29
+201,Bun Maska Cheese ,39
+202,Cheese Garlic Bread,59
+203,Vanillaised Milk Shake,69
+204,Mangolicious Milk Shake,69
+205,Strawberry Thick  Milk Shake,69
+206,Chocolate  Milk Shake,69
+207,Oreo Cream  Milk Shake,79
+208,Kit Kat  Milk Shake,79
+209,Saffron Thick  Milk Shake,79
+210,Rose Rabdi  Milk Shake,79
+211,Blueberry Blast Milk Shake,89
+212,Black Killer Milk Shake,99
+213,Butterscotch Nut  Milk Shake,99
+214,Chocolate Brownie,109
+215,Bubble Gum  Milk Shake,109
+216,Dry Fruit Shake,119
+217,Butter Sweet Corn ,49
+218,Masala Sweet Corn,49
+219,Lemon Sweet Corn ,49
+220,Veggie sweet Corn ,59
+221,Cheese Sweet Corn ,59
+222,Classic Maggi,29
+223,Double Masala Maggi,39
+224,Salsa Maggi,49
+225,Veggie Maggi,49
+226,Schezwan Maggi,59
+227,Cheese Corn Maggi,59
+228,Khatta Meetha Pani Poori,20
+229,Haazma Hazam Pani Poori,20
+230,Chowpati Pani Poori,20
+231,Lassan Pani Poori,20
+232,Matka Hing Pani Poori,20
+233,Spicy Mango Pani Poori,30
+234,Chilli Guava  Pani Poori,30
+235,Strawberry Pani Poori,30
+236,Kala Khatta Pani Poori,30
+237,Kiwi Pani Poori,30
+238,All 5 Pani Poori,40
+239,Chaat Khalifa,69
+240,Chaat Formula Special ,79
+241,Soya Chaat,59
+242,Maggi Chaat,59
+243,Peanut Chaat,69
+244,Chana Chaat,69
+245,Corn Chaat,69
+246,Makhana mix Chaat,79
+247,Regular Bhel,30
+248,Indori Bhel,40
+249,Kolkata Jhaalmuri Bhel,40
+250,Schezwan Bhel,40
+251,Special Cheese Corn Bhel,50
+252,Cheese Kurkure Bhel,50
+253,Dahi Puri,40
+254,Dahi Aloo Chaat,40
+255,Dahi Papdi Chaat,50
+256,Indori Khopra Pattice ,49
+257,Indori Dahi Khopra Pattice,49
+258,Indori Mango Khopra Pattice ,59
+259,Hot Masala Papdi Chaat,59
+260,Masala Tray,49
+261,Peanut Corn Chaat,49
+262,Cheese Corn Chaat,59
+263,Cheese Mint Chaat,59
+264,Masala Triangle Chaat,49
+265,Cheese Triangle Chaat,49
+266,Cheese Corn Triangle,59
+267,Cheese Mint Triangle Chaat ,59
+268,Masala Basket Chaat,49
+269,Dahi Basket Chaat,49
+270,Cheese Corn Basket,59
+271,Creamy Basket Chaat,59
+272,Cheese Mint Basket Chaat,59
+273,Aloo Tikki (single),20
+274,Bun Tikki,30
+275,Alloo Tikki 2PCS,35
+276,Choley Tikki ,45
+277,Paneer Choley Tikki ,50
+278,Cheese Aloo Tikki,50
+279,Pineapple Pastry,39
+280,Shot Pudding Cup,30
+281,Cheese Cake,99
+282,Red Velvet Truffle,65
+283,Chocolate Walnut Truffle,89
+284,Jar Cake,140
+285,DBC Pastry,69
+286,Bomblone,59
+287,Cup Cakes,29
+288,Walnut Brownie With Chocolate,89
+289,Butter Scotch Nutty,49
+290,Tart,49
+291,Milk Chocolate Pastry,79
+292,Fresh Fruit Cake,399
+293,Blueberry Cheese Cake,599
+294,Pineapple Rich Cake,399
+295,Red Velvet Truffle Cake,450
+296,Butterscotch Nutty Cake,450
+297,Milk chocolate Cake,499
+298,Sheet Cake,450
+299,Dutch Truffle Cake,499
+300,Walnut Brownie Dry Cake,250
+301,Red Velvet dry cake,230
+302,Butter Scotch dry cake,200
+303,Kaju Katli Premium (1kg),799
+304,Kaju Katli Premium (100g),79
+305,Honey Dryfruit Ladoo Premium (1kg),899
+306,honey dryfruit Ladoo Premium (100g),89
+307,Khajoor Dryfruit Ladoo Premium (1kg),699
+308,Khajoor Dryfruit Ladoo Premium (100g),69
+309,Atta Premium Dry Fruit Ladoo (1kg),499
+310,Atta Premium Dry Fruit Ladoo (100g),49
+311,Desi Ghee Premium Motichur Ladoo (1kg),549
+312,Desi Ghee Premium Motichur Ladoo (100g),55
+313,Premium Dryfruit Urad Daal Pinni (1kg),499
+314,Premium Dryfruit Urad Daal Pinni (100g),49
+315,Premium Milk Pudding (1kg),549
+316,Premium Milk Pudding (100g),55
+317,Besan Dry Fruit Ladoo (1kg),499
+318,Besan Dry Fruit Ladoo (100g),49
+319,GulabKand (1kg),499
+320,GulabKand (100g),49
+321,Kashmir Pinni (Milk Cake) (1kg),499
+322,Kashmir Pinni (Milk Cake) (100g),49
+323,Premium Bhuni Mava Barfi (1kg),449
+324,Premium Bhuni Mava Barfi (100g),49
+325,Special Chocolate Barfi (1kg),499
+326,Special Chocolate Barfi (100g),49
+327,Gulab Jamun Desi Ghee (1kg),449
+328,Gulab Jamun Desi Ghee (100g),45
+329,Kala Jamun Desi Ghee (1kg),449
+330,Kala Jamun Desi Ghee (100g),45
+331,White Rasgulla Chota (1kg),260
+332,White Rasgulla Chota (100g),29
+333,Malai Chaap (1kg),399
+334,Malai Chaap (100g),39
+335,Dry Fruit Halwa (khas Khas) (1kg),999
+336,Dry Fruit Halwa (khas Khas) (100g),99
+337,Gulab Jamun,29
+338,Kala Jamun,29
+339,Spongy Rasgulla,29
+340,Rabri,49
+341,Rabri + Gulab + Jamun,59
+342,Dhokla,39
+343,Gajar ka Halwa,49
+344,Ras Malai Kesar,39
+345,Ras Malai Dry Fruit ,59
+346,Vanilla Indrani,49
+347,Kulhad Chena Kheer,59
+348,Sweet Lassi ,39
+349,Mango Lassi,39
+350,Milk Badam,49
+351,Vanilla Scoop,30
+352,Strawberry Scoop,30
+353,Butter Scotch Scoop,35
+354,Chocolate Chip Scoop,35
+355,Mango Scoop,40
+356,Tutti-Frutti,40
+357,Pineapple,40
+358,Coconut Special Scoop,50
+359,Black Current Scoop,50
+360,Blue berry Scoop,60
+361,Belgum Chocolate Dark Scoop,60
+362,Pan Special Scoop,60
+363,Rabri Mithai Scoop,60
+364,Nutty Buddy Scoop (Vanilla/Chocolate/ButterScotch),80
+365,Nutty Buddy Scoop(Any Three),100
+366,Family Special Pack (any Six),180
+367,Vanilla Softy,25
+368,Chocolate Softy,25
+369,Mango Softy,25
+370,Strawberry Softy,25
+371,mix Softy,25
+372,Hot Butter Scotch Sundae,119
+373,Fruit Salad Sundae,119
+374,Pineapple Sundae,109
+375,All American Banana Split Sundae,109
+376,Hot Chocolate Fudge (Waffles / Brownie),119
+377,Banana Caramel (Waffles / Brownie),119
+378,Brownie HCF,109
+379,Death By Chocolate (Waffles / Brownie),109
+380,Ice Crean Sandwich,109
+381,Warm Brownie with Vanilla ,99
+382,Gulab Jamun with Vanilla ,99
+383,Waffle Cone (add on),20
+384,Chocolate Dip (add on),10
+385,Pink Lady Mocktail,89
+386,Spicy Mango Mocktail,99
+387,Chilli Guava Mocktail,99
+388,Green Goddness Mocktail,99
+389,Blue Ocean Mocktail,99
+390,Mint 'O' Fresh Mocktail,119
+391,Kiwi Mocktail,129
+392,Blueberry Mocktail,129
+393,Cindrella Mocktail,139
+394,Pink Colada,139
+395,Virgin Mojito,69
+396,Water Melon  Mojito,79
+397,Rose  Mojito,89
+398,Kiwi Mojito,99
+399,Blueberry Mojito,99
+400,Malai Soya Chaap (1),90
+401,Malai Soya Chaap (2),150
+402,Masala Soya Chaap (1),70
+403,Masala Soya Chaap (2),130
+404,Crunchy Soya Chaap (1),90
+405,Crunchy Soya Chaap (2),160
+406,Crunchy Malai Chaap (1),120
+407,Crunchy Malai Chaap (2),220
+408,Baby Doll Chaap (1),100
+409,Baby Doll Chaap (2),180
+410,Sunny Leone Chaap (1),110
+411,Sunny Leone Chaap (2),180
+412,Veg Fish Finger (1),120
+413,Veg Fish Finger (2),220
+414,Veg Kalezi Tikka (1),100
+415,Veg Kalezi Tikka (2),200
+416,Chat Pati Masala Soya (1),70
+417,Chat Pati Masala Soya (2),130
+418,Afgani Soya Chaap (1) ,80
+419,Afgani Soya Chaap (2),130
+420,Chatpati Aachari Soya (1),80
+421,Chatpati Aachari Soya (2),130
+422,Veg Butter Chicken Gravy (1),150
+423,veg Butter Chicken Gravy (2),250
+424,Veg Keema Gravy (1),150
+425,Veg Keema Gravy (2),250
+426,Veg Mutton Rogon Josh Gravy (1),150
+427,Veg Mutton Rogon Josh Gravy (2),250
+428,Veg Keema Kalezi (1),160
+429,Veg Keema Kalezi (2),250
+430,Kadhai Chaap (1) ,140
+431,Kadhai Chaap (2),240
+432,Butter Gravy Soya Chaap (1),140
+433,Butter Gravy Soya Chaap (2) ,240
+434,Tandoori Momos (veg),79
+435,Tandoori Momos (non veg),119
+436,Afgani Momos (veg),89
+437,Afgani Momos (non veg),129
+438,Achari Momos (veg),89
+439,Achari Momos (non veg),129
+440,Tandoori Cheese Momos (veg),99
+441,Tandoori Cheese Momos (non veg),149
+442,Aallo Roll ,40
+443,Vegie Roll ,60
+444,Paneer Roll ,80
+445,Paneer Bhurji Roll,80
+446,Soya Chaap Roll,80
+447,Chilly Paneer Roll,80
+448,Veg Seekh Roll,90
+449,Egg Roll,40
+450,Chicken Roll,80
+451,Egg Chicken Roll ,60
+452,Chicken Tikka Roll ,90
+453,Chicken Seekh Roll ,90
+454,Chilly Chicken Roll ,100
+455,Malai Chicken Roll ,100
+456,Butter Chicken Roll ,120
+457,Keema Roll ,130
+458,Chicken Shawarma,70
+459,Paneer Shawarma,70

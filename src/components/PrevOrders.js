@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const PrevOrders = (props) => {
@@ -81,7 +82,7 @@ const PrevOrders = (props) => {
                   }
                 }}
               >
-                <img src="/delete.png" id={order._id} alt="" width={20} />
+                <Image src="/delete.png" id={order._id} alt="" height={20} width={20} />
               </div>
             </div>
             <div

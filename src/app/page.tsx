@@ -27,7 +27,6 @@ export default function Home() {
   const [menu, setmenu] = useState(Array());
   let fetchMenu = async () => {
     let csvToObject = (csvString: string) => {
-      try{
       const lines = csvString.split("\n");
       const header = lines[0].split(",");
       const objects = [];
@@ -46,10 +45,6 @@ export default function Home() {
         objects.push(currentObject);
       }
       return objects;
-      }catch(err){
-        alert('Some error occured')
-        console.log(err)
-      }
     };
     let data = await fetch("/menu.csv");
     let res = await data.text();

@@ -270,7 +270,6 @@ export default function Home() {
     try {
       let id = (e.target as HTMLInputElement).id;
 
-      console.log(id);
       let d = await fetch(
         `https://foodcourtbackend.adaptable.app/fetchone/${id}`
       );
@@ -290,9 +289,6 @@ export default function Home() {
   };
   let checkDetails = () => {
     let pass = process.env.NEXT_PUBLIC_LOGIN;
-    console.log(pass)
-    console.log(username)
-    console.log(password)
     if (pass) {
       let obj = JSON.parse(pass);
       if (obj[username] == password) {
@@ -302,7 +298,6 @@ export default function Home() {
         }
       }else{
         let ele = document.getElementById('incorrectDetails')
-        console.log(ele)
         if(ele){
           ele.style.visibility = "visible";
         }
@@ -310,11 +305,9 @@ export default function Home() {
     }
   };
   let handleUserChange = (e: { target: { value: SetStateAction<string> } }) => {
-    console.log(e.target.value);
     setUsername(e.target.value);
   };
   let handlePassChange = (e: { target: { value: SetStateAction<string> } }) => {
-    console.log(e.target)
     setPassword(e.target.value);
   };
   let SubmitDetails = (e: React.KeyboardEvent<HTMLElement>) => {

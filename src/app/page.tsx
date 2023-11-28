@@ -38,7 +38,7 @@ export default function Home() {
         for (let j = 0; j < header.length; j++) {
           if (j == 2) {
             currentObject["price"] = Number.parseInt(
-              currentLine[j].slice(0, currentLine[j].length - 1)
+              currentLine[j]
             );
           } else {
             currentObject[header[j]] = currentLine[j];

@@ -14,6 +14,8 @@ export default function Home() {
   const [phone, setPhone] = useState("");
   const [update, setupdate] = useState(0);
   const [alertState, setalertState] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [orderData, setOrderData] = useState([
     {
       sr: "",
@@ -102,42 +104,40 @@ export default function Home() {
     setOrderData(arr);
   };
   let insertData = (e: React.FocusEvent<HTMLInputElement>) => {
-    try{
-    let srval = e.target.value;
-    let row = Number.parseInt(e.target.id.split("-")[1]);
-    if (srval == "") {
-      let arr = Array.from(orderData);
-      arr[row].name = "";
-      arr[row].price = "";
-      arr[row].qty = "";
-      setOrderData(arr);
-    } else {
-      let ind = -1;
-      menu.forEach((val, i) => {
-        if (val.sr == srval) {
-          ind = i;
-        }
-      });
-      if (ind != -1) {
+    try {
+      let srval = e.target.value;
+      let row = Number.parseInt(e.target.id.split("-")[1]);
+      if (srval == "") {
         let arr = Array.from(orderData);
-        arr[row].name = menu[ind].name;
-        arr[row].price = menu[ind].price;
-        arr[row].qty = "1";
-
+        arr[row].name = "";
+        arr[row].price = "";
+        arr[row].qty = "";
         setOrderData(arr);
+      } else {
+        let ind = -1;
+        menu.forEach((val, i) => {
+          if (val.sr == srval) {
+            ind = i;
+          }
+        });
+        if (ind != -1) {
+          let arr = Array.from(orderData);
+          arr[row].name = menu[ind].name;
+          arr[row].price = menu[ind].price;
+          arr[row].qty = "1";
+
+          setOrderData(arr);
+        }
+        if (ind == -1) {
+          setalertState("Unable to Find order!");
+          setTimeout(() => {
+            setalertState("");
+          }, 4000);
+        }
       }
-      if (ind == -1) {
-        setalertState("Unable to Find order!");
-        setTimeout(() => {
-          setalertState("");
-        }, 4000);
-      }
-      }
-    }catch(err){
-      console.log(err)
-      alert('Some error occured')
+    } catch (err) {
+      console.log(err);
     }
-    
   };
   let isEnter = (e: React.KeyboardEvent<HTMLElement>) => {
     let arr = Array.from(orderData);
@@ -194,58 +194,63 @@ export default function Home() {
     setOrderData(arr);
   };
   let saveOrder = async (e: React.MouseEvent<HTMLElement>) => {
-    let arr = Array.from(orderData)
+    let arr = Array.from(orderData);
     for (let index = 0; index < arr.length; index++) {
       const element = arr[index];
-      if(element.sr==''){
-        arr.splice(index, 1)
+      if (element.sr == "") {
+        arr.splice(index, 1);
       }
     }
     e.preventDefault();
-    let obj = { name, orderData:arr, paid, phone: Number.parseInt(phone), total };
-    try{
-    if (id == "") {
-      let res = await fetch("https://foodcourtbackend.adaptable.app/save", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(obj),
-      });
-      let done = await res.json();
-      if (done) {
-        setalertState("Saved Sucessfully!");
-        setTimeout(() => {
-          setalertState("");
-        }, 4000);
-      }
-      newOrder();
-      setupdate(update + 1);
-    } else {
-      let res = await fetch(
-        `https://foodcourtbackend.adaptable.app/edit/${id}`,
-        {
-          method: "PUT",
+    let obj = {
+      name,
+      orderData: arr,
+      paid,
+      phone: Number.parseInt(phone),
+      total,
+    };
+    try {
+      if (id == "") {
+        let res = await fetch("https://foodcourtbackend.adaptable.app/save", {
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(obj),
+        });
+        let done = await res.json();
+        if (done) {
+          setalertState("Saved Sucessfully!");
+          setTimeout(() => {
+            setalertState("");
+          }, 4000);
         }
-      );
-      let done = await res.json();
-      if (done) {
-        setalertState("Updated Sucessfully!");
-        setTimeout(() => {
-          setalertState("");
-        }, 4000);
+        newOrder();
+        setupdate(update + 1);
+      } else {
+        let res = await fetch(
+          `https://foodcourtbackend.adaptable.app/edit/${id}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(obj),
+          }
+        );
+        let done = await res.json();
+        if (done) {
+          setalertState("Updated Sucessfully!");
+          setTimeout(() => {
+            setalertState("");
+          }, 4000);
+        }
+        newOrder();
+        setupdate(update + 1);
       }
-      newOrder();
-      setupdate(update + 1);
+    } catch (err) {
+      console.log(err);
     }
-  }catch(err){
-    console.log(err)
-    alert('some Error occured')
-  }
   };
   let newOrder = () => {
     setid("");
@@ -262,22 +267,61 @@ export default function Home() {
     setpaid(false);
   };
   const updated = async (e: React.MouseEvent<HTMLElement>) => {
-    try{
-    let id = (e.target as HTMLInputElement).id;
+    try {
+      let id = (e.target as HTMLInputElement).id;
 
-    console.log(id);
-    let d = await fetch(
-      `https://foodcourtbackend.adaptable.app/fetchone/${id}`
-    );
-    let data = await d.json();
-    setid(data._id);
-    setname(data.name);
-    setPhone(data.phone);
-    setOrderData(data.orderData);
-    setTotal(data.total);
-    }catch(err){
-      console.log(err)
-      alert('some error occured')
+      console.log(id);
+      let d = await fetch(
+        `https://foodcourtbackend.adaptable.app/fetchone/${id}`
+      );
+      let data = await d.json();
+      setid(data._id);
+      setname(data.name);
+      setPhone(data.phone);
+      setOrderData(data.orderData);
+      setTotal(data.total);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  let checkDetail = (e:React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    checkDetails()
+  };
+  let checkDetails = () => {
+    let pass = process.env.NEXT_PUBLIC_LOGIN;
+    console.log(pass)
+    console.log(username)
+    console.log(password)
+    if (pass) {
+      let obj = JSON.parse(pass);
+      if (obj[username] == password) {
+        let ele = document.getElementById('loginDetails')
+        if(ele){
+          ele.style.display = 'none'
+        }
+      }else{
+        let ele = document.getElementById('incorrectDetails')
+        console.log(ele)
+        if(ele){
+          ele.style.visibility = "visible";
+        }
+      }
+    }
+  };
+  let handleUserChange = (e: { target: { value: SetStateAction<string> } }) => {
+    console.log(e.target.value);
+    setUsername(e.target.value);
+  };
+  let handlePassChange = (e: { target: { value: SetStateAction<string> } }) => {
+    console.log(e.target)
+    setPassword(e.target.value);
+  };
+  let SubmitDetails = (e: React.KeyboardEvent<HTMLElement>) => {
+    if(e.key=='Enter'){
+
+      e.preventDefault();
+    checkDetails();
     }
   };
   return (
@@ -454,6 +498,54 @@ export default function Home() {
           setAlertState={setalertState}
         />
       </div>
+      <form
+        className="flex backdrop-blur-md w-full h-full absolute left-0 top-0 justify-center items-center"
+        onKeyDown={SubmitDetails}
+        id="loginDetails"
+      >
+        <div className="w-1/3 h-2/3 bg-white flex p-4 content-center items-center rounded-md flex-col">
+          <h1 className="text-3xl font-semibold my-3">
+            Eat and Meet - FoodCourt
+          </h1>
+          <p className="text-sm my-3">
+            Welcome to Eat and Meet FoodCourt. This page is meant for only staff
+            use. Please enter Username and Password to continue.
+          </p>
+
+          <div>
+            <label htmlFor="username">Username</label>
+            <input
+              className="py-1 w-11/12 px-2 focus:outline-none outline-blue-500 outline outline-1 focus:shadow-[0_0_5px_0px_#48abe0;] mb-5 rounded-sm"
+              id="username"
+              type="text"
+              autoComplete="off"
+              value={username}
+              onChange={handleUserChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="password">Password</label>
+            <input
+              className="py-1 w-11/12 px-2 focus:outline-none outline-blue-500 outline outline-1 focus:shadow-[0_0_5px_0px_#48abe0;] mb-5 rounded-sm"
+              id="password"
+              type="password"
+              autoComplete="off"
+              value={password}
+              onChange={handlePassChange}
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-11/12 bg-blue-500 hover:bg-blue-700 transition-transform active:scale-75 flex justify-center items-center h-10 text-xl text-white mx-auto my-2 rounded-lg"
+            onClick={checkDetail}
+          >
+            Log In
+          </button>
+          <div id="incorrectDetails" className="text-left text-red-500 w-11/12 invisible">
+            Username or password is incorrect.
+          </div>
+        </div>
+      </form>
     </main>
   );
 }

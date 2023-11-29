@@ -347,7 +347,7 @@ export default function Home() {
         <div className="w-8 bg-black h-1 my-1 rounded-md"></div>
       </div>
       <div className="sm:w-4/5 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:right-5 absolute mx-1">
-        <h1 className="text-3xl text-gray-950 text-center font-semibold my-6 sm:my-16">
+        <h1 className="text-2xl sm:text-3xl text-gray-950 text-center font-semibold my-6 sm:my-16">
           Eat and Meet
         </h1>
         <form onKeyDown={preventsubmit}>

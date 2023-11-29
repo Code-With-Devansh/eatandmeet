@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import Head from 'next/head';
 import { SetStateAction, useState, useEffect, MouseEvent } from "react";
 const PrevOrders = dynamic(() => import("../components/PrevOrders"), {
   ssr: false,
@@ -318,9 +319,35 @@ export default function Home() {
     }
   };
   return (
-    <main className="flex">
-      <div className="w-4/5 right-5 absolute">
-        <h1 className="text-3xl text-gray-950 text-center font-semibold my-16">
+    <>
+     <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </Head>
+    <main className="flex justify-center sm:justify-normal">
+      <div className="absolute sm:hidden top-6 left-3 cursor-pointer transition-transform duration-200 -rotate-180" id="hamburger" onClick={()=>{
+        let ele = document.getElementById('sidebar')
+        if(ele){
+          if (ele.classList.contains('-translate-x-full')){
+            ele.classList.remove('-translate-x-full')
+          }else{
+            ele.classList.add('-translate-x-full')
+          }
+        }
+        let e = document.getElementById('hamburger')
+        if(e){
+          if (e.classList.contains('-rotate-180')){
+            e.classList.remove('-rotate-180')
+          }else{
+            e.classList.add('-rotate-180')
+          }
+        }
+      }}>
+        <div className="w-8 bg-black h-1 my-1 rounded-md"></div>
+        <div className="w-8 bg-black h-1 my-1 rounded-md"></div>
+        <div className="w-8 bg-black h-1 my-1 rounded-md"></div>
+      </div>
+      <div className="sm:w-4/5 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:right-5 absolute mx-1">
+        <h1 className="text-3xl text-gray-950 text-center font-semibold my-6 sm:my-16">
           Eat and Meet
         </h1>
         <form onKeyDown={preventsubmit}>
@@ -333,7 +360,7 @@ export default function Home() {
               name="named"
               autoComplete="off"
               id="name"
-              className="mx-2 py-1 px-2 focus:outline-none hover:outline-blue-500 hover:outline hover:outline-1 rounded-md  focus:shadow-[0_0_5px_0px_#48abe0;]"
+              className="mx-2 py-1 px-2 focus:outline-none hover:outline-blue-500 hover:outline hover:outline-1 rounded-md focus:shadow-[0_0_5px_0px_#48abe0;]"
             />
           </div>
           <div className="my-2">
@@ -350,33 +377,30 @@ export default function Home() {
           </div>
           <table
             id="example"
-            className="stripe hover w-full bg-white p-10 rounded-xl border-collapse border border-slate-400"
+            className="stripe hover w-full bg-white p-10 rounded-xl border-collapse border border-slate-400 overflow-x-auto"
             border={1}
           >
             <caption className="font-bold text-2xl ">Order Information</caption>
             <thead>
               <tr>
                 <th
-                  data-priority="1"
-                  className="w-2/12 p-1 border border-slate-300"
+                  className="sm:w-2/12 w-12 p-1 border border-slate-300"
                 >
-                  Serial Number
+                  <span className="sm:hidden">Sr.</span>
+  <span className="hidden sm:inline">Serial Number</span>
                 </th>
                 <th
-                  data-priority="2"
-                  className="w-5/12 p-1 border border-slate-300"
+                  className="sm:w-5/12 p-1 border border-slate-300"
                 >
                   Name
                 </th>
                 <th
-                  data-priority="3"
-                  className="w-2/12 p-1 border border-slate-300"
+                  className="sm:w-2/12 w-20 p-1 border border-slate-300"
                 >
                   Quantity
                 </th>
                 <th
-                  data-priority="4"
-                  className="w-3/12 p-1 border border-slate-300"
+                  className="sm:w-3/12 w-12 p-1 border border-slate-300"
                 >
                   Price
                 </th>
@@ -388,7 +412,7 @@ export default function Home() {
                   <tr key={ind}>
                     <td className=" border border-slate-300">
                       <input
-                        className="py-1 px-2 focus:outline-none hover:outline-blue-500 hover:outline hover:outline-1 focus:shadow-[0_0_5px_0px_#48abe0;]"
+                        className="w-12 py-1 px-2 focus:outline-none hover:outline-blue-500 hover:outline hover:outline-1 focus:shadow-[0_0_5px_0px_#48abe0;]"
                         type="number"
                         name="sr"
                         id={`sr-${ind}`}
@@ -404,7 +428,7 @@ export default function Home() {
                         src="/minusicon.png"
                         width={20}
                         height={20}
-                        className="h-5 cursor-pointer"
+                        className="h-4 sm:h-5 cursor-pointer"
                         alt=""
                         id={`m-${ind}`}
                         onClick={calcQty}
@@ -414,7 +438,7 @@ export default function Home() {
                         name="qty"
                         id={`qty-${ind}`}
                         onKeyDown={isEnter}
-                        className="w-20 py-1 px-2 focus:outline-none hover:outline-blue-500 hover:outline hover:outline-1 rounded-md  focus:shadow-[0_0_5px_0px_#48abe0;] text-center"
+                        className="w-10 py-1 px-2 focus:outline-none hover:outline-blue-500 hover:outline hover:outline-1 rounded-md  focus:shadow-[0_0_5px_0px_#48abe0;] text-center"
                         value={obj.qty}
                         onChange={changeData}
                       />
@@ -422,7 +446,7 @@ export default function Home() {
                         src="/addicon.png"
                         width={20}
                         height={20}
-                        className="h-5 cursor-pointer"
+                        className="h-4 sm:h-5 cursor-pointer"
                         alt=""
                         id={`+-${ind}`}
                         onClick={calcQty}
@@ -483,7 +507,7 @@ export default function Home() {
         </form>
         <Alert message={alertState} />
       </div>
-      <div className="w-1/6 absolute left-0 min-h-full bg-white">
+      <div className="sm:w-1/6 w-52 top-16 transition-transform duration-200 sm:top-0 absolute left-0 min-h-full bg-white -translate-x-full sm:translate-x-0" id="sidebar">
         <PrevOrders
           updatecheck={update}
           update={updated}
@@ -496,8 +520,8 @@ export default function Home() {
         onKeyDown={SubmitDetails}
         id="loginDetails"
       >
-        <div className="w-1/3 h-2/3 bg-white flex p-4 content-center items-center rounded-md flex-col">
-          <h1 className="text-3xl font-semibold my-3">
+        <div className="w-[390px] bg-white flex p-4 content-center items-center rounded-md flex-col">
+          <h1 className="text-2xl font-semibold my-3">
             Eat and Meet - FoodCourt
           </h1>
           <p className="text-sm my-3">
@@ -540,5 +564,6 @@ export default function Home() {
         </div>
       </form>
     </main>
+    </>
   );
 }

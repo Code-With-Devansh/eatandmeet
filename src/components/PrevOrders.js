@@ -6,7 +6,7 @@ const PrevOrders = (props) => {
   const [data, setdata] = useState(Array());
   let getdata = async () => {
     try{
-      let d = await fetch("https://foodcourtbackend.adaptable.app/prevorders");
+      let d = await fetch("https://backend-food-court.vercel.app/prevorders");
       let res = await d.json();
       let arr = []
       for (let index = 0; index < res.length; index++) {
@@ -40,7 +40,7 @@ const PrevOrders = (props) => {
 
       let id = e.target.id;
       console.log(id)
-      let res = await fetch(`https://foodcourtbackend.adaptable.app/delete/${id}`,{
+      let res = await fetch(`https://backend-food-court.vercel.app/delete/${id}`,{
         method:'DELETE'
       })
     let done = await res.json()

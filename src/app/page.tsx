@@ -212,7 +212,7 @@ export default function Home() {
     };
     try {
       if (id == "") {
-        let res = await fetch("https://foodcourtbackend.adaptable.app/save", {
+        let res = await fetch("https://backend-food-court.vercel.app/save", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -230,7 +230,7 @@ export default function Home() {
         setupdate(update + 1);
       } else {
         let res = await fetch(
-          `https://foodcourtbackend.adaptable.app/edit/${id}`,
+          `https://backend-food-court.vercel.app/edit/${id}`,
           {
             method: "PUT",
             headers: {
@@ -272,7 +272,7 @@ export default function Home() {
       let id = (e.target as HTMLInputElement).id;
 
       let d = await fetch(
-        `https://foodcourtbackend.adaptable.app/fetchone/${id}`
+        `https://backend-food-court.vercel.app/fetchone/${id}`
       );
       let data = await d.json();
       setid(data._id);
